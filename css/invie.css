@@ -14,6 +14,9 @@ body{
 	margin-bottom: 0;
 	margin-top:70px;
 }
+.titulo span{
+	text-decoration: underline;
+}
 .title-a{
 	font-size: 24px;
 	font-family: 'Montserrat', sans-serif;
@@ -33,8 +36,10 @@ body{
 }
 .portada{
 	background-image: url('../img/background.png');
+	background-size: cover;
 	color:white;
 	padding: 20px;
+	height: 500px;
 
 }
 .portada button{
@@ -50,8 +55,18 @@ body{
 	display: inline-block;
 	margin-left: 30px;
 }
+.menu a{
+	color: white;
+	text-decoration: none;
+}
 .logo{
 	display: inline-block;
+	margin-left: 0;
+}
+.menu li:before{
+	content:'⊝';
+	font-size: 15px;
+	line-height: 20px;
 }
 .header{
 	position: relative;
@@ -78,7 +93,7 @@ body{
 .izquierda{
 	float: left;
 	position: relative;
-	top:80px;
+	
 }
 .contenedor-guitarra-a{
 	padding-left: 20px;
@@ -86,12 +101,93 @@ body{
 .contenedor-guitarra-b{
 	margin-left:370px;
 	padding-left:10px;
+	position: relative;
+	bottom: 90px;
 }
-button{
-	border-radius: 5px;
+.button{
+	border-radius: 12px;
 	background-color: #fd324e;
 	color: white;
 	border:none; 
-	padding: 7px;
+	padding: 7px 15px;
 	cursor: pointer;
+	font-size: 18px;
+	background: linear-gradient(to left,#fe334E,#FF7250);
+}
+footer{
+	background-color: #273b47;
+}
+.contacto img{
+	display: block;
+}
+.contacto strong {
+	display: block;
+}
+.contacto a{
+	color:white;
+	text-decoration: none;
+	/*border: 1px solid red;*/
+	margin:10px 10px 10px 0;
+}
+
+.footer .contenedor{
+	display: flex;
+/*	border: 1px solid yellow;*/
+	justify-content:space-between;
+}
+
+form{
+	/*border: 1px solid red;*/
+}
+
+.contacto{
+	/*border:1px solid red;*/
+	display: flex;
+	width: 300px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.formulario{
+	display: flex;
+	width:400px;
+	color:white;
+	padding: 50px 10px;
+}
+.col1 , .col2{
+	display: flex;
+	flex-direction: column;
+	/*border: 1px solid pink;*/
+}
+.col1{
+	margin-right: 15px;
+}
+.col2{
+	align-items: flex-start;
+}
+.intereses label{
+	font-size: 12px;
+}
+.formulario label, .sexo .intereses{
+	margin-bottom:10px;
+}
+.sexo{
+	margin-top: 10px;
+}
+table{
+	width: 100%;
+}
+th{
+	background-color: #273b47;
+	color:white;
+}
+th{
+	padding: 10px 20px;
+	text-align: left;
+}
+td{
+	padding: 20px;
+}
+table, td, th {
+	border:1px solid #273b47;
+	border-collapse: collapse;
 }
