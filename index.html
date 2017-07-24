@@ -47,9 +47,15 @@
 
 	<section id="guitarras" class="guitarras contenedor"> <!--  Guitarras -->
 		<h2>Nuestas guitarras</h2>
-		
+		<div class="video-responsive-contenedor">
+			<iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<video src="video/320x240.ogg">
+			
+
+		</video>
 		<article class="guitarra"><!--guitarra 1-->
-			<img class="derecha" src="img/invie-acustica.png"  alt="Guitarra Invie Acustica" width="350"/>
+			<img class="derecha" data-src="img/invie-acustica.png"  alt="Guitarra Invie Acustica" width="350"/>
 			<div class="contenedor-guitarra-a">
 				<h3 class="title-b">Invie Acustica</h3>
 				<ol>
@@ -61,7 +67,7 @@
 			
 		</article>
 		<article class="guitarra b"><!--guitarra 2-->
-			<img class="izquierda" src="img/invie-classic.png"  alt="Guitarra Invie Classic" width="350" />
+			<img class="izquierda" data-src="img/invie-classic.png"  alt="Guitarra Invie Classic" width="350" />
 			<div class="contenedor-guitarra-b">
 				<h3 class="title-b">Invie Acustica</h3>
 				<ol>
@@ -78,7 +84,7 @@
 
 			<div class="contacto">
 
-				<img src="img/invie-white.png" alt="Logo blanco">
+				<img data-src="img/invie-white.png" alt="Logo blanco">
 				<a href="tel:993677147"><strong>Teléfono</strong>
 				<span>993677147</span></a>
 				<a href="mailto:contacto@invie.com"><strong>E-mail</strong><span>contacto@invie.com</span></a>
@@ -125,12 +131,13 @@
 		</div>	
 
 	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
 	<script>
 		var consulta = window.matchMedia('(max-width:500px)');
 		consulta.addListener(mediaQuery);
 
 		var $burgerButton = document.getElementById('burger-button');
-			var $menu= document.getElementById('menu');
+		var $menu= document.getElementById('menu');
 
 			function toggleMenu(){
 						$menu.classList.toggle('active');
@@ -141,8 +148,7 @@
 				// si se cumple hacemos esto
 				console.log('Se cumplio la condicion');
 					$burgerButton.addEventListener('touchstart', toggleMenu);
-
-					
+			
 			} else {
 				$burgerButton.removeEventListener('touchstart', toggleMenu);
 					console.log("no se cumplio");
@@ -152,6 +158,10 @@
 		mediaQuery();
 
 
+		var bLazy = new Blazy({
+     		selector:'img'
+
+		});
 			
 			// $burgerButton.addEventListener('touchstart', toggleMenu);
 			
